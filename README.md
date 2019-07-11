@@ -1,2 +1,2 @@
 # JS2
-Homework
+Homework for the course javascript 2
