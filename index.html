@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="textWrapper">
+    </div>
+</body>
+<script>
+    let text;
+
+    let client = new XMLHttpRequest();
+    client.open('GET', '/texttoreplace.txt', false);
+    client.onreadystatechange = function () {
+        text = client.responseText;
+    }
+    client.send();
+
+    let textContainer = document.querySelector('.textWrapper');
+    textContainer.innerText = text.replace(/(?!s'|[A-Za-z]'[a-z])([\s\S])'|^'/g, '$1"');
+
+    console.log(text.replace(/(?!s'|[A-Za-z]'[a-z])([\s\S])'|^'/g, '$1"'));
+
+</script>
+
+
+
+</html>
