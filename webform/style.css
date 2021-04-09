@@ -1,0 +1,41 @@
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+.webform {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 30px;
+    background-color: lightgray;
+    border-radius: 5%;
+}
+
+.webform input {
+    padding: 5px;
+}
+
+.webform .submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid darkgray;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 25px;
+    width: 100px;
+    height: 30px;
+}
+
+.error::placeholder {
+    color: red;
+}
+
+.error {
+    outline: 1px solid red;
+}
